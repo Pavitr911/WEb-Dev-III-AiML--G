@@ -7,8 +7,8 @@
 // console.log(math.subtract(5, 3));
 
 // console.log("Hello World");
-
-// console.log(os.cpus());
+import os from 'os';
+console.log(os.cpus());
 
 import {add,subtract} from './math.js';
 

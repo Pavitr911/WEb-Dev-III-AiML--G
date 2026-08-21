@@ -11,7 +11,7 @@ const users=[
 
 
 app.get("/",(req,res)=>{
-    res.send("Hello Students");
+    res.send("Hello Students");  //text or HTML
 })
 
 app.get("/about",(req,res)=>{
@@ -19,7 +19,7 @@ app.get("/about",(req,res)=>{
 })
 
 app.get("/users",(req,res)=>{
-    res.json(users);
+    res.json(users);   //JSON format or object type
 })
 
 app.listen(PORT, () => {

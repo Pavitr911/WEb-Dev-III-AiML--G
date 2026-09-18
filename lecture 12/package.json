@@ -1,0 +1,21 @@
+{
+  "name": "web-dev-iii-aiml--g",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pavitr911/WEb-Dev-III-AiML--G.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Pavitr911/WEb-Dev-III-AiML--G/issues"
+  },
+  "homepage": "https://github.com/Pavitr911/WEb-Dev-III-AiML--G#readme"
+}

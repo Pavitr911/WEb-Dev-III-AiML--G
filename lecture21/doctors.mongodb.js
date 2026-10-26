@@ -1,20 +1,20 @@
-use("HospitalDB");
+use("Hospitaldb");
 
 // CREATE 1 insert  2insertOne 3 insertMany
-// db.doctors.insertMany([
-//     {
-//         name: "Dr. Amit",
-//         age: 30,
-//         specialization: "Dermatologist",
-//         salary: 300000
-//     },
-//     {
-//         name: "Dr. Rahul",
-//         age: 35,
-//         specialization: "Cardiologist",
-//         salary: 500000
-//     }
-// ]);
+db.doctors.insertMany([
+    {
+        name: "Dr. Amit",
+        age: 30,
+        specialization: "Dermatologist",
+        salary: 300000
+    },
+    {
+        name: "Dr. Rahul",
+        age: 35,
+        specialization: "Cardiologist",
+        salary: 500000
+    }
+]);
 
 // db.doctors.insertOne(
 //     {
@@ -25,37 +25,80 @@ use("HospitalDB");
 //     }
 // )
 
-// READ Operations 1. find()  2. findOne()
-// db.doctors.find();
-// db.doctors.findOne()
-// db.doctors.findOne({name: "Rakesh Sharma"})
-
-
-//UPDATE Operations 1. updateOne() 2. updateMany()
-
-// db.doctors.updateOne(
-//     { name: "Dr. Amit" },
-//     { $set: { salary: 350000 } }
-//  )
-
-
-// db.doctors.updateMany(
-//     { specialization: "Cardiologist" },
-//     { $set: { salary: 600000 } }
+// db.doctors.insert(
+//     {
+//         name: "Dr. Rahul",
+//         age: 35,
+//         specialization: "Cardiologist",
+//         salary: 500000
+//     }
 // )
 
 
+// READ Operations 1. find()  2. findOne()
+// db.doctors.find();
+// db.doctors.findOne()
 
-//DELETE Operations 1. deleteOne() 2. deleteMany()
-
-// db.doctors.deleteOne({ name: "Dr. Rahul" })
-// db.doctors.deleteMany({ specialization: "Cardiologist" })    
-
-
-
-
-
-
+// READ with condition
+// db.doctors.find({
+//     specialization: "Cardiologist"
+// });
+// db.doctors.findOne({name: "Rakesh Sharma"})
 
 
+// // UPDATE
+// db.doctors.updateOne(
+//     { name: "Rakesh Sharma" },
+//     { 
+//         $set: { 
+//             salary: 400000
+//         } 
+//     }
+// );
 
+// db.doctors.updateMany(
+//     { name: "Rakesh Sharma" },
+//     { 
+//         $set: { 
+//             salary: 500000,
+//             experience: 25,
+//             fees: 2500
+//         } 
+//     }
+// );
+
+// db.doctors.updateMany(
+//     { name: "Dr. Amit" },
+//     { 
+//         $set: { 
+//             salary: 500000,
+//             experience: 20,
+//             fees: 3500
+//         } 
+//     }
+// );
+
+// DELETE Operation
+// db.doctors.deleteOne({
+//     name: "Dr. Amit"
+// });
+
+// db.doctors.deleteMany({
+//     salary: 500000
+// });
+//  db.doctors.find(
+//     {
+//         department:{
+//             $eq: "Cardiology"
+//         }
+//     }
+//  )
+// db.startup_log.find(
+//     {
+//         $or: [
+//             { department: { $eq: "Cardiology" } },
+//             {fees: { $gt: 2000 } }
+//         ]
+//     }
+// )
+// db.doctors.find({},{name:1, specialization:1, salary:1, _id:0})
